@@ -2,65 +2,43 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>A Little Night Between Two Stars</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="sky"></div>
-<div id="meteor"></div>
-
-<section id="intro" class="scene active">
+<div id="intro" class="scene">
+  <div class="stars"></div>
+  <div class="meteor"></div>
   <div class="intro-copy">
-    <div class="eyebrow">A LITTLE NIGHT BETWEEN TWO STARS</div>
-    <h1>Something has<br>arrived.</h1>
-    <p>There is a strange light somewhere beyond the clouds.</p>
-    <button id="start">BEGIN</button>
+    <div class="tiny">SOMEWHERE BEYOND MIDNIGHT</div>
+    <h1>A LITTLE NIGHT<br>BETWEEN TWO STARS</h1>
+    <p>Something has arrived.</p>
+    <button id="start">ENTER THE NIGHT</button>
   </div>
-</section>
+</div>
 
-<section id="loading" class="scene">
-  <div class="loading-box">
-    <div class="loading-title">LOADING NIGHT...</div>
-    <div class="bar"><span></span></div>
-    <div class="loading-small">PLEASE WAIT FOR THE UNEXPECTED</div>
+<div id="game" class="scene hidden">
+  <div class="hud">
+    <span id="chapter">NIGHT I</span>
+    <span id="hint">TAP THE NIGHT</span>
   </div>
-</section>
-
-<section id="game" class="scene">
-  <div class="stars-label">THE NIGHT IS QUIET.</div>
-  <div id="meteor2"></div>
-
-  <div id="lucifer" class="character lucifer" aria-label="Lucifer">
-    <div class="wings"></div><div class="hair"></div><div class="face"></div>
-    <div class="neck"></div><div class="coat"></div>
-    <div class="arm a-left"></div><div class="arm a-right"></div>
-    <div class="leg l-left"></div><div class="leg l-right"></div>
+  <div id="sky"></div>
+  <div id="moon"></div>
+  <div id="lucifer" class="sprite"><img src="lucifer.png" alt="Pixel Lucifer"></div>
+  <div id="michael" class="sprite"><img src="michael.png" alt="Pixel Michael"></div>
+  <div id="dialogue" class="dialogue hidden">
+    <div id="speaker"></div>
+    <div id="line"></div>
+    <button id="next">CONTINUE</button>
   </div>
-
-  <div id="michael" class="character michael" aria-label="Michael Myers">
-    <div class="mask"></div><div class="face2"></div><div class="body2"></div>
-    <div class="arm2 a-left"></div><div class="arm2 a-right"></div>
-    <div class="leg2 l-left"></div><div class="leg2 l-right"></div>
-    <div class="knife" aria-hidden="true"></div>
+  <div id="ending" class="ending hidden">
+    <div class="tiny">THE NIGHT IS QUIET AGAIN</div>
+    <h2>Some stars are<br>worth chasing.</h2>
+    <p>And some are worth finding.</p>
+    <button id="again">PLAY AGAIN</button>
   </div>
-
-  <div id="dialogue" class="dialogue"></div>
-  <div id="objective" class="objective">TAP THE SCREEN TO FOLLOW THE STORY</div>
-</section>
-
-<section id="ending" class="scene ending">
-  <div class="ending-star">✦</div>
-  <div class="eyebrow">THE END OF THIS LITTLE NIGHT</div>
-  <h2>Somewhere between<br>heaven and darkness...</h2>
-  <p>two strange little souls found each other.</p>
-  <p class="small">Maybe that is enough of a miracle for one night.</p>
-  <button id="again">PLAY AGAIN</button>
-</section>
-
+</div>
 <script src="script.js"></script>
 </body>
 </html>
